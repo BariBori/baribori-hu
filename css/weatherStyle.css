@@ -1,0 +1,53 @@
+body {
+    background-image:url('');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+}
+
+/*HEADER - H1*/
+.header {
+    font-family: Roboto, sans-serif;
+    color:black;
+    font-size: 4vw;
+    text-align: center;
+}
+
+/*VALUES*/
+.values {
+    font-family: Roboto, sans-serif;
+    color:black;
+    font-size: 2vw;
+    text-align: center;
+
+}
+
+/*WHITE BACKGROUND*/
+.background {
+    width: 50%;
+    height: auto;
+    background-color: #fefefe;
+    opacity: 1;
+    border-radius: 2px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 5px;
+    font-family: Roboto, sans-serif;
+    display: block;
+    margin: 50px auto;
+
+}
+
+
+
+/*FAHRENHEIT BUTTON*/
+.button{
+    bottom: 0;
+    margin-bottom: 1vw;
+    position:center;
+    font-size: 1vw;
+    font-weight: bold;
+}
+
+
+

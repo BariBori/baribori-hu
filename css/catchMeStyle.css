@@ -1,0 +1,21 @@
+body {
+    margin: 50px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #fafafa;
+    }
+
+#randomItem{
+    background-color: red;
+    width: 100px;
+    height: 100px;
+}
+
+.randomField{
+    height:100%;
+    width:100%;
+}
+
+.result{
+    font-weight: bold;
+}
+

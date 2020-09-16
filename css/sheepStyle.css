@@ -1,0 +1,288 @@
+body{
+	background: #D4F5F9;
+	background-image: url('landscape.svg');
+	background-position: center;  /*Center the image */
+	background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+  
+  /* Resize the background image to cover the entire container */
+}
+
+/*------------------CLOUDS---------------------*/
+.cloud1{
+	background-image: url('cloud1.svg');
+	margin: 30px;
+	width: 130px;
+	height: 80px;
+	animation: cloud1Anim 20s infinite 0s linear;
+}
+
+@keyframes cloud1Anim {
+  0%{
+    transform: translateX(-100px);
+  }
+    
+  100%{
+    transform: translateX(1300px);
+  }
+}
+
+.cloud2{
+	background-image: url('cloud2.svg');
+	margin: -40px;
+	width: 150px;
+	height: 85px;
+	animation: cloud2Anim 30s infinite 0s linear;
+}
+
+@keyframes cloud2Anim {
+  0%{
+    transform: translateX(-200px);
+  }
+		
+  100%{
+    transform: translateX(1400px);
+  }
+}
+
+
+/*----------------SHEEP WRAPPER------------------*/
+.wrap {
+  position: relative;
+  top: 200px;
+  margin-left: 35%;
+}  
+
+.wrap .shadow {
+  width: 140px;
+  height: 8px;
+  border-radius: 50%;
+  position: absolute;
+  top: 320px;
+  left: 40px;
+  background-color: rgba(0, 0, 0, 0.1);
+  animation: shadowGrow 1s ease-in-out infinite;
+}
+
+@keyframes shadowGrow {
+  0%, 100% {
+    transform: scale(1.1);
+    filter: blur(9px);
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    transform: scale(1);
+    filter: blur(12px);
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
+
+.wrap:hover .talkbubble,
+.wrap:hover .talkbubble:before,
+.wrap:hover .BAAA{
+	opacity:1;
+	transition: opacity .15s ease-in-out;
+}
+
+/*-------------SHEEP-----------*/
+
+.sheep{
+   animation: sheepBounce 1s ease-in-out infinite;
+   left: 50%;
+}
+
+@keyframes sheepBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-25px) scale(0.98,1);
+
+  } 
+}
+
+
+.sheep .bodySheep {
+  background-color: white;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 3;
+  opacity: 1;
+  box-shadow: inset -10px 10px 10px rgba(169, 169, 169, 0.1);
+}
+
+.sheep .face {
+  z-index: 5;
+  background-color: #333;
+  width: 100px;
+  height: 140px;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  position: absolute;
+  top: 28px;
+  left: 70px;
+  box-shadow: inset -4px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+
+.sheep .leg-left {
+  background-color: #333;
+  width: 15px;
+  height: 40px;
+  border-radius: 50% / 5%;
+  position: absolute;
+  top: 220px;
+  left: 100px;
+	z-index: 2;
+  opacity: 1;
+  box-shadow: inset -5px 5px 5px rgba(0, 0, 0, 0.2);
+	animation: legLeft 1s ease-in-out infinite;
+	animation-play-state: running;
+}
+
+@keyframes legLeft {
+  0%, 100% {
+    transform: rotate(0.0turn);
+  }
+  50% {
+    transform: rotate(0.10turn);	 
+  }
+}
+
+
+.sheep .leg-right {
+  background-color: #333;
+  width: 15px;
+  height: 40px;
+  border-radius: 50% / 5%;
+  position: absolute;
+  top: 220px;
+  left: 120px;
+  z-index: 2;
+  opacity: 1;
+  box-shadow: inset -5px 5px 5px rgba(0, 0, 0, 0.2);
+	animation: legRight 1s ease-in-out infinite;
+}
+
+@keyframes legRight {
+  0%, 100% {
+    transform: rotate(0.0turn);
+  }
+  50% {
+    transform: rotate(-0.10turn);	 
+  }  
+}
+   
+
+.sheep .ear-left {
+  z-index: 4;
+  background-color: #333;
+  width: 20px;
+  height: 30px;
+	transform: rotate(0.15turn);
+  border-radius: 50%;
+  position: absolute;
+  top: 47px;
+  left: 67px;
+  animation: earLeft 1s ease-in-out infinite;
+}
+
+@keyframes earLeft {
+  0%, 100% {
+    transform: rotate(0.15turn);
+  }
+  50% {
+    transform: rotate(0.25turn);	 
+  } 
+}
+
+
+.sheep .ear-right {
+  z-index: 4;
+  background-color: #333;
+  width: 20px;
+  height: 30px;
+	transform: rotate(-0.20turn);
+  border-radius: 50%;
+  position: absolute;
+  top: 47px;
+  left: 150px;
+  box-shadow: inset -4px 2px 3px rgba(0, 0, 0, 0.5);
+	animation: earRight 1s ease-in-out infinite;
+}
+ 
+@keyframes earRight {
+  0%, 100% {
+    transform: rotate(-0.15turn);
+  }
+   50% {
+  	transform: rotate(-0.25turn);	 
+   } 
+}
+ 
+ 
+ 
+  
+
+/*----------SHEEP HOVER------------*/
+
+.sheep:hover{
+  animation-play-state: paused;
+}
+
+.sheep:hover,
+.sheep:hover .leg-left, 
+.sheep:hover .leg-right, 
+.sheep:hover .ear-left,
+.sheep:hover .ear-right{
+	animation-play-state: paused;
+}
+
+.wrap:hover .shadow {
+	animation-play-state: paused;
+}
+
+ /*---------TALKBUBBLE-------------*/
+.BAAA{
+	position: absolute;
+	padding: 20px;
+	z-index:2;
+	color: #000;
+	font-size: 25px;
+	opacity: 0;
+	left: 0px;
+	
+}
+
+ .talkbubble {
+  width: 120px;
+  height: 80px;
+	top: 50px;
+	left: -130px;
+  background: white;
+  position: relative;
+	border-left: 3px solid #333;
+	border-bottom: 3px solid #333;
+	-moz-border-radius:5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+	opacity: 0;
+}
+
+.talkbubble:before {
+  content: "";
+  position: absolute;
+  left: 100%;
+  top: 26px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-left: 20px solid white;
+  border-bottom: 10px solid transparent;
+	opacity:0;
+}
+
+ 
